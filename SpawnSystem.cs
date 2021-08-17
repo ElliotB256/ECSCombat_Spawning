@@ -32,7 +32,7 @@ namespace Spawning
             var modifierBuffers = GetBufferFromEntity<ModifierBufferElement>(true);
 
             Dependency = Entities.ForEach(
-                (DynamicBuffer<ModifierBufferElement> modifiers, Entity playedHandEntity, in Spawn spawn, in Translation translation) =>
+                (DynamicBuffer<ModifierBufferElement> modifiers, in Spawn spawn, in Translation translation) =>
                 {
                     for (int i = 0; i < spawn.Count; i++)
                     {
